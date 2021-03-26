@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% block content %}
+  <p>
+    おすすめファッション
+  </p>
+  {% for path in img_path_list %}
+    <img src={{path}} height="300" alt="img_data">
+  {% endfor %}
+  <BR>
+  <p><a href="/">もう一度試す</a></p>
+{% endblock %}
