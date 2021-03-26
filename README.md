@@ -1,0 +1,3 @@
+# WebApp-FashionRecommendation
+深層距離学習を用いた顔の特徴に基づくファッション推薦Webアプリ
+# WebApp-FashionRecommendation
