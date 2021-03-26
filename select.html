@@ -1,9 +1,0 @@
-{% extends "index.html" %}
-{% block content %}
-  <p>対象の<u>人物画像</u>を選択してください．</p>
-  <p>※<i>顔を含んだ画像</i>でないとうまく推薦できません．</p>
-  <form action="./result" method="POST" enctype="multipart/form-data">
-    <input type="file" name="file" />
-    <input type="submit" />
-  </form>
-{% endblock %}
