@@ -75,13 +75,13 @@ Webアプリとして，実際にファッションの推薦を行うための�
 $ python launch.py
 ```
 Flaskのデフォルトポートは5000番であり，[http://localhost:5000/](http://localhost:5000/)　にブラウザでアクセスすると，Webアプリが表示されます．
-<img src="img/init.png" width="1000">
+<img src="img/init.png" width="500">
   
 人物の画像をアップロードすると，
-<img src="img/select.png" width="1000">
+<img src="img/select.png" width="500">
   
 対象人物にファッションが推薦されます．
-<img src="img/result.png" width="1000">
+<img src="img/result.png" width="500">
 
 ### トレーニング
 以下を実行することにより，モデルのトレーニング(学習)が行えます．  
