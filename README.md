@@ -1,6 +1,6 @@
 # WebApp-FashionRecommendation
 深層距離学習を用いた顔の特徴に基づくファッション推薦Webアプリです．  
-人物画像を入力することにより，その人物に似合うファッションの推薦を行います．  
+人物画像を入力すると，その人物に似合うファッションの推薦を行います．  
 <img src="img/WebApp.png" width="1000">
 
 ## 実行方法
@@ -49,12 +49,12 @@ FashionRecommendation ... カレントディレクトリ
 │   └── select.html
 ├── utils ... データの前処理を行うファイル
 │   ├── haarcascades
-│   │   └── haarcascade_frontalface_alt.xml
+│   │   └── haarcascade_frontalface_alt.xml ... (第三者著作物)
 │   └── transforms.py
 ├── dataset.py 
 ├── launch.py 
 ├── main.py 
-├── metrics.py ... 距離学習の実装(第3者の著作物)
+├── metrics.py ... 距離学習の実装(第三者著作物)
 ├── models.py 
 ├── nets.py 
 ├── FRModel.pht ... トレーニング済みモデルのパラメータ保存ファイル
@@ -66,8 +66,7 @@ FashionRecommendation ... カレントディレクトリ
 ### データセット
 教師データとして，ファッションコーディネートサイト[WEAR](https://wear.jp/) の人気投稿を用いました．  
 各データは人物の顔とファッションの2つの情報を持ちます．  
-※ データセットはファッションコーディネートサイト[WEAR](https://wear.jp/)から収集したものであり，頒布は認められておりません．  
-※ そのため，リポジトリ上のデータセットは代理のデータとなります．  
+※ データセットの頒布は認められていないため，リポジトリ上のデータセットは代理のデータとなります．  
 
 ### Webアプリの利用
 Webアプリとして，実際にファッションの推薦を行うための説明です．  
@@ -123,6 +122,6 @@ testモードとして実行するため，コマンドライン引数`--mode 't
     - other functions
     - README
 
-※ 第三者の著作物
+※ 第三者著作物
 - /FashionRecommendation/metric.py
 - /FashionRecommendation/utils/haarcascades/haarcascade_frontalface_alt.xml
