@@ -74,13 +74,13 @@ Webアプリとして，実際にファッションの推薦を行うための�
 ```
 $ python launch.py
 ```
-Flaskのデフォルトポートは5000番であり，[http://localhost:5000/](http://localhost:5000/)　にブラウザでアクセスすると，Webアプリが表示されます．
+Flaskのデフォルトポートは5000番であり，[http://localhost:5000/](http://localhost:5000/)　にブラウザでアクセスすると，Webアプリが表示されます．  
 <img src="img/init.png" width="500">
   
-人物の画像をアップロードすると，
+人物の画像をアップロードすると，  
 <img src="img/select.png" width="500">
   
-対象人物にファッションが推薦されます．
+対象人物にファッションが推薦されます．  
 <img src="img/result.png" width="500">
 
 ### トレーニング
