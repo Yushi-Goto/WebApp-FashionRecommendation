@@ -1,3 +1,7 @@
+# DESCRIPTION OF transforms.py
+#
+# データの前処理を行います．
+
 import torch
 import numpy as np
 import cv2
@@ -5,6 +9,7 @@ import cv2
 
 class Resize(object):
     """Resize a face image to minimum size"""
+    """顔画像のリサイズ処理"""
     def __init__(self, output_size):
         self.output_size = output_size
 
@@ -13,12 +18,14 @@ class Resize(object):
 
 class ToTensor(object):
     """Convert a ndarray of face image to Tensors."""
+    """顔画像をNumPy配列からTensorに変換"""
     def __call__(self, face):
         face = face.transpose((2, 0, 1))
         return torch.from_numpy(face).float()
 
 class GetFace(object):
     """Cut out a face into a square"""
+    """画像から顔の切り抜く"""
     def __call__(self, img):
         # 顔の検出
         cascade = cv2.CascadeClassifier("./utils/haarcascades/haarcascade_frontalface_alt.xml")
