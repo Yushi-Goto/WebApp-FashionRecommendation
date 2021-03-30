@@ -1,13 +1,13 @@
 # WebApp-FashionRecommendation
 深層距離学習を用いた顔の特徴に基づくファッション推薦Webアプリです．  
 人物画像を入力すると，その人物に似合うファッションの推薦を行います．  
-<img src="img/WebApp.png" width="1000">
+<img src="img/WebApp.png" width="800">
 
 ## 実行方法
 ### 環境
 システム開発/動作確認環境
 - Python 3.6.8 
-- MacOC Catalina (10.15.5)
+- MacOS Catalina (10.15.5)
 
 ライブラリおよびフレームワークは以下を用いました．
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/) (1.1.2)
@@ -26,11 +26,11 @@ $ pip install torchvision==0.9.0
 
 ### ファイル構造
 ```
-FashionRecommendation ... カレントディレクトリ
-├── dataset ... データセットディレクトリ
-│   ├── 0 ... 各データに対応するディレクトリ
-│   │   ├── face.jpg ... 顔画像
-│   │   └── fashion_1.jpg ... ファッション画像(ファイル名の末尾の数字はジャンルを表す)
+FashionRecommendation ......... カレントディレクトリ
+├── dataset ......... データセットディレクトリ
+│   ├── 0 ......... 各データのディレクトリ
+│   │   ├── face.jpg ......... 顔画像
+│   │   └── fashion_1.jpg ......... ファッション画像(名前末尾の数字はジャンルを表す)
 │   ├── 1
 │   :   ├── face.jpg
 │   :   └── fashion_0.jpg
@@ -39,34 +39,34 @@ FashionRecommendation ... カレントディレクトリ
 │       └── fashion_3.jpg
 ├── images
 │   └── input_face_img.png
-├── static ... 推薦ファッション画像の保存先
+├── static ......... 推薦ファッション画像の保存先
 │   ├── recom_img1-fashion_1.png
 │   ├── recom_img2-fashion_0.png
 │   └── recom_img3-fashion_2.png
-├── templates ... htmlテンプレートの格納ディレクトリ
+├── templates ......... htmlテンプレートの格納ディレクトリ
 │   ├── index.html
 │   ├── result.html
 │   └── select.html
-├── utils ... データの前処理を行うファイル
+├── utils ......... データの前処理を行うファイル
 │   ├── haarcascades
-│   │   └── haarcascade_frontalface_alt.xml ... (第三者著作物)
-│   └── transforms.py
-├── dataset.py 
-├── launch.py 
-├── main.py 
-├── metrics.py ... 距離学習の実装(第三者著作物)
-├── models.py 
-├── nets.py 
-├── FRModel.pht ... トレーニング済みモデルのパラメータ保存ファイル
-├── label_features.npy ... 教師データの顔画像の特徴ベクトル保存ファイル
-└── parameters.pickle ... トレーニング時に設定したパラメータの保存ファイル
+│   │   └── haarcascade_frontalface_alt.xml ......... (第三者著作物)
+│   └── transforms.py ......... データの前処理
+├── launch.py ......... Webアプリとしてシステムを起動させる
+├── main.py ......... システムを起動させる(モードなど詳細設定が可能)
+├── models.py ......... システムの学習やテストといった中核機能をなす
+├── dataset.py ......... データの読み込み，前処理，呼び出し処理を行う
+├── nets.py ......... ネットワーク(モデル)の定義，生成を行う
+├── metrics.py ......... 距離学習の実装(第三者著作物)
+├── FRModel.pht ......... トレーニング済みモデルのパラメータ保存ファイル
+├── label_features.npy ......... 教師データの顔画像の特徴ベクトル保存ファイル
+└── parameters.pickle ......... トレーニング時に設定したパラメータの保存ファイル
 ```
 都合上，リポジトリ上に存在しないファイルがあるため，実行に必要なファイルは[ここから]() ダウンロードしてください．
 
 ### データセット
 教師データとして，ファッションコーディネートサイト[WEAR](https://wear.jp/) の人気投稿を用いました．  
 各データは人物の顔とファッションの2つの情報を持ちます．  
-※ データセットの頒布は認められていないため，リポジトリ上のデータセットは代理のデータとなります．  
+※ データの頒布は認められていないため，リポジトリ上のデータセットディレクトリは空となります．  
 
 ### Webアプリの利用
 Webアプリとして，実際にファッションの推薦を行うための説明です．  
