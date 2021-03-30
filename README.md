@@ -61,7 +61,7 @@ FashionRecommendation ......... カレントディレクトリ
 ├── label_features.npy ......... 教師データの顔画像の特徴ベクトル保存ファイル
 └── parameters.pickle ......... トレーニング時に設定したパラメータの保存ファイル
 ```
-都合上，リポジトリ上に存在しないファイルがあるため，実行に必要なファイルは[ここから]() ダウンロードしてください．
+都合上，リポジトリ上に存在しないファイルがあるため，実行に必要なファイルは[ここから](https://drive.google.com/drive/folders/1b4kuIOMW8v-gmEDuV5JT3P_q1Ne9eyUv?usp=sharing) ダウンロードしてください．
 
 ### データセット
 教師データとして，ファッションコーディネートサイト[WEAR](https://wear.jp/) の人気投稿を用いました．  
