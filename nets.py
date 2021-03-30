@@ -1,3 +1,7 @@
+# DESCRIPTION OF nets.py
+#
+# ネットワーク(モデル)の定義，生成を行います．
+
 import os
 import numpy
 import torch
@@ -41,23 +45,11 @@ class FRNet(nn.Module):
         x = x.view(-1,int(self.input_size/4*self.input_size/4*self.num_fout3))
         x = self.fc1(x)
 
-        # x = self.concat(x, label)
-        # print('x')
-        # print(x)
-        # print(x.shape)
-        # print(' ')
-
         x = self.fc2(x)
 
         return x
 
     def concat(self, feature, label):
-        print('feature')
-        print(feature)
-        print(feature.shape)
-        print('label')
-        print(label)
-        print(label.shape)
         # new_feature = torch.cat([feature, label], dim=1)
 
         x = torch.empty(feature.shape[0], feature.shape[1]+1)

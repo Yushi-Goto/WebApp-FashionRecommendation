@@ -1,9 +1,13 @@
+# DESCRIPTION OF launch.py
+#
+# Webアプリを起動させます．
+# また，クライアントのリクエストに応じて，ルーティングを行います．
+
 from flask import Flask, render_template, request
 import os
 import torch
 import argparse
 import models
-
 
 app = Flask(__name__)
 

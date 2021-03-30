@@ -1,8 +1,11 @@
+# DESCRIPTION OF dataset.py
+#
+# データセットの読み込み，前処理，呼び出しを行います．
+
 import os
 import numpy
 import torch
 import cv2
-
 
 class FRDataset(torch.utils.data.Dataset):
     def __init__(self, dataset_path, transform=None):
