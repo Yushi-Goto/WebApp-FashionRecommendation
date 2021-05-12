@@ -16,6 +16,14 @@ param = {'device': device, 'mode': 'test', 'label_features_path': './label_featu
                         'model_path': './FRModel.pht', 'param_path': './parameters.pickle'}
 model = models.FRModel(param)
 
+@app.after_request
+def add_header(r):
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    r.headers['Cache-Control'] = 'public, max-age=0'
+    return r
+
 @app.route("/")
 def upload_file():
     return render_template("select.html")
